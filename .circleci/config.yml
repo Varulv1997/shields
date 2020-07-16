@@ -73,10 +73,6 @@ services_steps: &services_steps
           CYPRESS_INSTALL_BINARY: 0
 
     - run:
-        name: Identify services tagged in the PR title
-        command: npm run test:services:pr:prepare
-
-    - run:
         name: Run tests for tagged services
         environment:
           mocha_reporter: mocha-junit-reporter
